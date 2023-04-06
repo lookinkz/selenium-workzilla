@@ -142,9 +142,12 @@ for state, cities in cities_of_usa.items():
 
         # scrolling...
         data = scrolling(html)
+        print(type(data))
         with open('log.txt', 'a', newline='', encoding='utf-8') as file:
-            file.write('--- WORKING WITH THAT DATA ---')
-            file.write(data)
+            file.write(f'{state}: {city}')
+            for i in data:
+                file.write(str(i))
+            file.write('\n\n')
 
             # working with data
         work_with_data(data)
