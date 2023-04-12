@@ -60,7 +60,7 @@ for state, cities in cities_of_usa.items():
                 text = f'Working with {state}, {city}...\n'
                 file.write(text)
                 # launcing the browser
-            print(f"Working on {state}: {city}")
+            print(f"Working on {state}: {city}.")
             main_get_all_tags()
         except:
             print(f"Error in {state}: {city}\n\n")
