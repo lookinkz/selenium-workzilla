@@ -29,7 +29,7 @@ def main_get_all_tags():
         try:
             time.sleep(1)
             the_end = driver.find_element(By.CLASS_NAME, "HlvSq")
-            print("THE END:", the_end.text, "\n\n")
+            print("THE END:", the_end.text)
             # getting a tags
             a_tags = driver.find_elements(By.CLASS_NAME, 'hfpxzc')
             print(f'{state}, {city}: {len(a_tags)} tags')
@@ -60,7 +60,7 @@ for state, cities in cities_of_usa.items():
                 text = f'Working with {state}, {city}...\n'
                 file.write(text)
                 # launcing the browser
-            print(f"Working on {state}: {city}.")
+            print(f"\n\nWorking on {state}: {city}.")
             main_get_all_tags()
         except:
             print(f"Error in {state}: {city}\n\n")
